@@ -16,12 +16,12 @@ def alarm(alarm_timer):
         print(now)        
         if (now == alarm_timer):
             print("Wake Up! Wake Up! It's a brand new day!")
-            winsound.PlaySound("sound.wav", winsound.SDN_ASYNC)
+            winsound.Beep(2000,3000)
             break
             
 def actual_time():
-    alarm_timer= f"{hour.get()} : {min.get()} : {sec.get()}"
-    alarm(alarm_timer)        
+    alarm_timer= f"{hour.get()}:{min.get()}:{sec.get()}" 
+    alarm(alarm_timer)
     
 clock= Tk()
 
